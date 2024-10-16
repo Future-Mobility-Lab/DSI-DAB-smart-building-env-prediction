@@ -11,7 +11,7 @@ folder_path = '/workspace'
 data_path = f'{folder_path}/Processed Datasets/'
 probabilistic = False
 count = 50
-project_name =  "HASS_DSI_experiment_run"
+project_name =  "DSI_DAB_experiment_run"
 
 for filename in os.listdir(data_path):
     # Construct the full file path
