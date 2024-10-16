@@ -30,19 +30,6 @@ if gpus:
         # Memory growth must be set before GPUs have been initialized
         print(e)
 
-def load_best_performances():
-    if os.path.exists(track_file):
-        with open(track_file, 'r') as file:
-            return json.load(file)
-    return {}
-
-def update_best_performance(model_key, val_loss, model_path):
-    best_performances = load_best_performances()
-    if model_key not in best_performances or val_loss < best_performances[model_key]['val_loss']:
-        best_performances[model_key] = {'val_loss': val_loss, 'model_path': model_path}
-        with open(track_file, 'w') as file:
-            json.dump(best_performances, file)
-
 def smape(y_true, y_pred):
     # Convert y_true and y_pred to tensors of the same type, float32
     y_true = tf.convert_to_tensor(y_true, dtype=tf.float32)
