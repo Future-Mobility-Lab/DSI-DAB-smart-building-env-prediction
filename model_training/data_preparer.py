@@ -6,7 +6,7 @@ import shap
 from sklearn.preprocessing import MinMaxScaler
 from tensorflow.keras.callbacks import Callback, ModelCheckpoint
 from sklearn.metrics import mean_squared_error
-#from wandb.keras import WandbCallback
+from wandb.keras import WandbCallback
 from scipy.signal import find_peaks
 import tensorflow_probability as tfp
 from abc import ABC, abstractmethod
