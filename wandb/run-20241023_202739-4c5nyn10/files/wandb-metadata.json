@@ -1,0 +1,32 @@
+{
+  "os": "macOS-15.0.1-x86_64-i386-64bit",
+  "python": "3.10.0",
+  "startedAt": "2024-10-23T09:27:39.450569Z",
+  "program": "/Users/roupenminassian/Documents/Github/DSI-DAB-smart-building-env-prediction/experiment-run.py",
+  "codePath": "experiment-run.py",
+  "git": {
+    "remote": "https://github.com/Future-Mobility-Lab/DSI-DAB-smart-building-env-prediction.git",
+    "commit": "20c2ee4bcf49ac24142a67399203830d6c0c22e4"
+  },
+  "email": "roupenm@me.com",
+  "root": "/Users/roupenminassian/Documents/Github/DSI-DAB-smart-building-env-prediction",
+  "host": "Roupens-MacBook-Pro.local",
+  "username": "roupenminassian",
+  "executable": "/Users/roupenminassian/Documents/Github/DSI-DAB-smart-building-env-prediction/myenv/bin/python",
+  "codePathLocal": "experiment-run.py",
+  "cpu_count": 6,
+  "cpu_count_logical": 12,
+  "disk": {
+    "/": {
+      "total": "499963174912",
+      "used": "166942199808"
+    }
+  },
+  "memory": {
+    "total": "17179869184"
+  },
+  "cpu": {
+    "count": 6,
+    "countLogical": 12
+  }
+}

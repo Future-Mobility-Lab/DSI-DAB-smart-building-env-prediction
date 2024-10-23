@@ -1,50 +1,17 @@
 import os
 import json
+import click
 import wandb
 import numpy as np
 import pandas as pd
 import tensorflow as tf
-from wandb.keras import WandbCallback
-from tensorflow.keras.callbacks import Callback
-from data_preparer import DataPreparer, smape
-from model_creator import LSTMModel, CNNModel, CNNLSTMModel
+from utils.wandb_keras import WandbCallback
+from utils.support_functions import load_best_performances, update_best_performance, smape, SMAPECallback
+from model_training.data_preparer import DataPreparer
+from model_training.model_creator import LSTMModel, CNNModel, CNNLSTMModel
 
-def load_best_performances():
-    if os.path.exists(track_file):
-        with open(track_file, 'r') as file:
-            return json.load(file)
-    return {}
-
-def update_best_performance(model_key, val_loss, model_path):
-    best_performances = load_best_performances()
-    if model_key not in best_performances or val_loss < best_performances[model_key]['val_loss']:
-        best_performances[model_key] = {'val_loss': val_loss, 'model_path': model_path}
-        with open(track_file, 'w') as file:
-            json.dump(best_performances, file)
-
-class SMAPECallback(Callback):
-    def __init__(self, val_data, data_preparer):
-        super().__init__()
-        self.X_val, self.Y_val = val_data
-        self.data_preparer = data_preparer
-
-    def on_epoch_end(self, epoch, logs=None):
-        val_pred = self.model.predict(self.X_val)
-        val_pred_unnorm = self.data_preparer.unnormalize(val_pred)
-        y_true_unnorm = self.data_preparer.unnormalize(self.Y_val)
-
-        smape_value = self.calculate_smape(y_true_unnorm, val_pred_unnorm)
-        logs['val_smape'] = float(smape_value)  # Ensure this is a float, not np.float32
-
-        # Log SMAPE to wandb
-        wandb.log({'val_smape': smape_value}, commit=False)
-
-    def calculate_smape(self, y_true, y_pred):
-        return 100 * np.mean(2 * np.abs(y_pred - y_true) / (np.abs(y_pred) + np.abs(y_true)))
-    
-# Training and evaluation
 class ModelTrainer:
-    def __init__(self, model, X_train, Y_train, X_val, Y_val, data_preparer, model_name, save_path, history_path, probabilistic):
+    def __init__(self, model, X_train, Y_train, X_val, Y_val, data_preparer, model_name, save_path, history_path, probabilistic, track_file):
         self.model = model
         self.X_train = X_train
         self.Y_train = Y_train
@@ -55,6 +22,7 @@ class ModelTrainer:
         self.save_path = save_path
         self.history_path = history_path
         self.probabilistic = probabilistic
+        self.track_file = track_file
 
     def negative_log_likelihood(self, y_true, y_pred):
         return -y_pred.log_prob(y_true)
@@ -92,7 +60,7 @@ class ModelTrainer:
         smape_callback = SMAPECallback((self.X_val, self.Y_val), self.data_preparer)
 
         model_key = f"{self.model_name}"
-        best_performances = load_best_performances()
+        best_performances = load_best_performances(self.track_file)
         best_val_loss = best_performances.get(model_key, {}).get('val_loss', float('inf'))
         best_model_path = ""
 
@@ -104,7 +72,7 @@ class ModelTrainer:
         if final_val_loss < best_val_loss:
             best_model_path = os.path.join(self.save_path, f"{model_key}.keras")
             self.model.save(best_model_path, save_format='tf')
-            update_best_performance(model_key, final_val_loss, best_model_path)
+            update_best_performance(self.track_file, model_key, final_val_loss, best_model_path)
 
             history_file_path = os.path.join(self.history_path, f"{model_key}_history.json")
             with open(history_file_path, 'w') as hist_file:
@@ -115,7 +83,7 @@ class ModelTrainer:
         return best_model_path if best_model_path else "No improvement"
 
 # Main execution function
-def create_sweep_config(target_column, history_length, prediction_length, model_type, input_type, save_path, data_path, history_path, probabilistic):
+def create_sweep_config(target_column, history_length, prediction_length, model_type, input_type, save_path, data_path, history_path, probabilistic, track_file):
     return {
         'method': 'bayes',  # Use Bayesian optimization
         'name': f"{history_length}-{prediction_length}-{input_type}-{model_type}",
@@ -127,6 +95,7 @@ def create_sweep_config(target_column, history_length, prediction_length, model_
             'target_column': {'value': target_column},
             'data_path': {'value': data_path},
             'history_path': {'value': history_path},
+            'track_file': {'value': track_file},
             'save_path': {'value': save_path},
             'probabilistic': {'value': probabilistic},
             'history_length': {'value': history_length},
@@ -176,7 +145,7 @@ def model_training():
         else:
             raise ValueError("Unsupported model type")
 
-        trainer = ModelTrainer(model.model, X_train, Y_train, X_val, Y_val, preparer, model_name, config.save_path, config.history_path, config.probabilistic)
+        trainer = ModelTrainer(model.model, X_train, Y_train, X_val, Y_val, preparer, model_name, config.save_path, config.history_path, config.probabilistic, config.track_file)
         best_model_path = trainer.train()
 
         # Log the best model path to wandb for this run

@@ -1,0 +1,17 @@
+{"time":"2024-10-23T19:33:16.571094+11:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-23T19:33:16.571183+11:00","level":"INFO","msg":"created symlink","path":"/Users/roupenminassian/Documents/Github/DSI-DAB-smart-building-env-prediction/wandb/run-20241023_193316-1224v6xl/logs/debug-core.log"}
+{"time":"2024-10-23T19:33:16.59072+11:00","level":"INFO","msg":"created new stream","id":"1224v6xl"}
+{"time":"2024-10-23T19:33:16.59083+11:00","level":"INFO","msg":"stream: started","id":"1224v6xl"}
+{"time":"2024-10-23T19:33:16.591249+11:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"1224v6xl"}}
+{"time":"2024-10-23T19:33:16.591604+11:00","level":"INFO","msg":"sender: started","stream_id":"1224v6xl"}
+{"time":"2024-10-23T19:33:16.591606+11:00","level":"INFO","msg":"handler: started","stream_id":{"value":"1224v6xl"}}
+{"time":"2024-10-23T19:33:17.093247+11:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-23T19:33:19.371642+11:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-23T19:33:19.371713+11:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-23T19:33:20.376578+11:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.780554458}],"total_operations":1}}
+{"time":"2024-10-23T19:33:20.495135+11:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-23T19:33:21.755267+11:00","level":"INFO","msg":"stream: closing","id":"1224v6xl"}
+{"time":"2024-10-23T19:33:21.755296+11:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"1224v6xl"}}
+{"time":"2024-10-23T19:33:21.755319+11:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"1224v6xl"}}
+{"time":"2024-10-23T19:33:21.755329+11:00","level":"INFO","msg":"sender: closed","stream_id":"1224v6xl"}
+{"time":"2024-10-23T19:33:21.755452+11:00","level":"INFO","msg":"stream: closed","id":"1224v6xl"}

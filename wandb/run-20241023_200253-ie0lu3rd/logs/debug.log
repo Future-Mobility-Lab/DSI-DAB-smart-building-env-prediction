@@ -1,0 +1,49 @@
+2024-10-23 20:02:53,723 INFO    Thread-2 (_run_job):85940 [wandb_setup.py:_flush():79] Current SDK version is 0.18.5
+2024-10-23 20:02:53,723 INFO    Thread-2 (_run_job):85940 [wandb_setup.py:_flush():79] Configure stats pid to 85940
+2024-10-23 20:02:53,723 INFO    Thread-2 (_run_job):85940 [wandb_setup.py:_flush():79] Loading settings from /Users/roupenminassian/.config/wandb/settings
+2024-10-23 20:02:53,723 INFO    Thread-2 (_run_job):85940 [wandb_setup.py:_flush():79] Loading settings from /Users/roupenminassian/Documents/Github/DSI-DAB-smart-building-env-prediction/wandb/settings
+2024-10-23 20:02:53,723 INFO    Thread-2 (_run_job):85940 [wandb_setup.py:_flush():79] Loading settings from environment variables: {'project': 'DSI_DAB_experiment_run', 'entity': 'roupenminassian', 'root_dir': '/Users/roupenminassian/Documents/Github/DSI-DAB-smart-building-env-prediction', 'sweep_id': 'vzq9kru0', 'run_id': 'ie0lu3rd', 'sweep_param_path': '/Users/roupenminassian/Documents/Github/DSI-DAB-smart-building-env-prediction/wandb/sweep-vzq9kru0/config-ie0lu3rd.yaml'}
+2024-10-23 20:02:53,724 INFO    Thread-2 (_run_job):85940 [wandb_setup.py:_flush():79] Applying setup settings: {'mode': None, '_disable_service': None}
+2024-10-23 20:02:53,724 INFO    Thread-2 (_run_job):85940 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program_relpath': 'experiment-run.py', 'program_abspath': '/Users/roupenminassian/Documents/Github/DSI-DAB-smart-building-env-prediction/experiment-run.py', 'program': '/Users/roupenminassian/Documents/Github/DSI-DAB-smart-building-env-prediction/experiment-run.py'}
+2024-10-23 20:02:53,724 INFO    Thread-2 (_run_job):85940 [wandb_setup.py:_flush():79] Applying login settings: {}
+2024-10-23 20:02:53,724 INFO    Thread-2 (_run_job):85940 [wandb_init.py:_log_setup():534] Logging user logs to /Users/roupenminassian/Documents/Github/DSI-DAB-smart-building-env-prediction/wandb/run-20241023_200253-ie0lu3rd/logs/debug.log
+2024-10-23 20:02:53,724 INFO    Thread-2 (_run_job):85940 [wandb_init.py:_log_setup():535] Logging internal logs to /Users/roupenminassian/Documents/Github/DSI-DAB-smart-building-env-prediction/wandb/run-20241023_200253-ie0lu3rd/logs/debug-internal.log
+2024-10-23 20:02:53,724 INFO    Thread-2 (_run_job):85940 [wandb_init.py:init():621] calling init triggers
+2024-10-23 20:02:53,724 INFO    Thread-2 (_run_job):85940 [wandb_init.py:init():628] wandb.init called with sweep_config: {'activation': 'leaky_relu', 'batch_size': 16, 'cnn_kernel_size_1': 2, 'cnn_kernel_size_2': 2, 'cnn_layers': 2, 'data_path': 'workspace/Processed Datasets/CB06.03.015_ssd_01D997.csv', 'dense_units': 128, 'dilation_rate_1': 1, 'dilation_rate_2': 4, 'epochs': 50, 'filters_1': 64, 'filters_2': 128, 'history_length': 1, 'history_path': 'workspace/t/Model Training History/CB06.03.015_ssd_01D997', 'input_type': 'univariate', 'kernel_size_1': 5, 'kernel_size_2': 5, 'learning_rate': 0.09596032958089652, 'lstm_layers': 5, 'lstm_units': 32, 'model_type': 'CNNModel', 'optimizer': 'adam', 'prediction_length': 1, 'probabilistic': False, 'save_path': 'workspace/t/Model Weights/CB06.03.015_ssd_01D997', 'target_column': 't'}
+config: {}
+2024-10-23 20:02:53,724 INFO    Thread-2 (_run_job):85940 [wandb_init.py:init():671] starting backend
+2024-10-23 20:02:53,724 INFO    Thread-2 (_run_job):85940 [wandb_init.py:init():675] sending inform_init request
+2024-10-23 20:02:53,734 INFO    Thread-2 (_run_job):85940 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2024-10-23 20:02:53,734 INFO    Thread-2 (_run_job):85940 [wandb_init.py:init():688] backend started and connected
+2024-10-23 20:02:53,749 INFO    Thread-2 (_run_job):85940 [wandb_run.py:_config_callback():1390] config_cb None None {'activation': 'leaky_relu', 'batch_size': 16, 'cnn_kernel_size_1': 2, 'cnn_kernel_size_2': 2, 'cnn_layers': 2, 'data_path': 'workspace/Processed Datasets/CB06.03.015_ssd_01D997.csv', 'dense_units': 128, 'dilation_rate_1': 1, 'dilation_rate_2': 4, 'epochs': 50, 'filters_1': 64, 'filters_2': 128, 'history_length': 1, 'history_path': 'workspace/t/Model Training History/CB06.03.015_ssd_01D997', 'input_type': 'univariate', 'kernel_size_1': 5, 'kernel_size_2': 5, 'learning_rate': 0.09596032958089652, 'lstm_layers': 5, 'lstm_units': 32, 'model_type': 'CNNModel', 'optimizer': 'adam', 'prediction_length': 1, 'probabilistic': False, 'save_path': 'workspace/t/Model Weights/CB06.03.015_ssd_01D997', 'target_column': 't'}
+2024-10-23 20:02:53,755 INFO    Thread-2 (_run_job):85940 [wandb_init.py:init():783] updated telemetry
+2024-10-23 20:02:53,809 INFO    Thread-2 (_run_job):85940 [wandb_init.py:init():816] communicating run to backend with 90.0 second timeout
+2024-10-23 20:02:54,087 INFO    Thread-2 (_run_job):85940 [wandb_init.py:init():867] starting run threads in backend
+2024-10-23 20:02:54,874 INFO    Thread-2 (_run_job):85940 [wandb_run.py:_console_start():2463] atexit reg
+2024-10-23 20:02:54,874 INFO    Thread-2 (_run_job):85940 [wandb_run.py:_redirect():2311] redirect: wrap_raw
+2024-10-23 20:02:54,874 INFO    Thread-2 (_run_job):85940 [wandb_run.py:_redirect():2376] Wrapping output streams.
+2024-10-23 20:02:54,875 INFO    Thread-2 (_run_job):85940 [wandb_run.py:_redirect():2401] Redirects installed.
+2024-10-23 20:02:54,879 INFO    Thread-2 (_run_job):85940 [wandb_init.py:init():911] run started, returning control to user process
+2024-10-23 20:02:56,904 INFO    Thread-2 (_run_job):85940 [wandb_run.py:_finish():2158] finishing run roupenminassian/DSI_DAB_experiment_run/ie0lu3rd
+2024-10-23 20:02:56,905 INFO    Thread-2 (_run_job):85940 [wandb_run.py:_atexit_cleanup():2426] got exitcode: 0
+2024-10-23 20:02:56,905 INFO    Thread-2 (_run_job):85940 [wandb_run.py:_restore():2408] restore
+2024-10-23 20:02:56,905 INFO    Thread-2 (_run_job):85940 [wandb_run.py:_restore():2414] restore done
+2024-10-23 20:02:59,132 INFO    Thread-2 (_run_job):85940 [wandb_run.py:_restore():2408] restore
+2024-10-23 20:02:59,132 INFO    Thread-2 (_run_job):85940 [wandb_run.py:_restore():2414] restore done
+2024-10-23 20:02:59,132 ERROR   Thread-2 (_run_job):85940 [wandb_run.py:_atexit_cleanup():2447] Problem finishing run
+Traceback (most recent call last):
+  File "/Users/roupenminassian/Documents/Github/DSI-DAB-smart-building-env-prediction/myenv/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2438, in _atexit_cleanup
+    self._on_finish()
+  File "/Users/roupenminassian/Documents/Github/DSI-DAB-smart-building-env-prediction/myenv/lib/python3.10/site-packages/wandb/sdk/wandb_run.py", line 2727, in _on_finish
+    self._backend.cleanup()
+  File "/Users/roupenminassian/Documents/Github/DSI-DAB-smart-building-env-prediction/myenv/lib/python3.10/site-packages/wandb/sdk/backend/backend.py", line 214, in cleanup
+    self.interface.join()
+  File "/Users/roupenminassian/Documents/Github/DSI-DAB-smart-building-env-prediction/myenv/lib/python3.10/site-packages/wandb/sdk/interface/interface_shared.py", line 537, in join
+    self._router.join()
+  File "/Users/roupenminassian/Documents/Github/DSI-DAB-smart-building-env-prediction/myenv/lib/python3.10/site-packages/wandb/sdk/interface/router.py", line 100, in join
+    self._thread.join()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py", line 1089, in join
+    self._wait_for_tstate_lock()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/threading.py", line 1105, in _wait_for_tstate_lock
+    elif lock.acquire(block, timeout):
+Exception

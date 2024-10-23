@@ -1,0 +1,17 @@
+{"time":"2024-10-23T20:33:02.102846+11:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-23T20:33:02.102917+11:00","level":"INFO","msg":"created symlink","path":"/Users/roupenminassian/Documents/Github/DSI-DAB-smart-building-env-prediction/wandb/run-20241023_203302-epil3wbf/logs/debug-core.log"}
+{"time":"2024-10-23T20:33:02.123088+11:00","level":"INFO","msg":"created new stream","id":"epil3wbf"}
+{"time":"2024-10-23T20:33:02.123161+11:00","level":"INFO","msg":"stream: started","id":"epil3wbf"}
+{"time":"2024-10-23T20:33:02.12317+11:00","level":"INFO","msg":"handler: started","stream_id":{"value":"epil3wbf"}}
+{"time":"2024-10-23T20:33:02.123559+11:00","level":"INFO","msg":"sender: started","stream_id":"epil3wbf"}
+{"time":"2024-10-23T20:33:02.123569+11:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"epil3wbf"}}
+{"time":"2024-10-23T20:33:02.561386+11:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-23T20:33:05.009794+11:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-23T20:33:05.009836+11:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-23T20:33:06.015244+11:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.569382705},{"desc":"uploading config.yaml","runtime_seconds":0.323432328,"progress":"1.7KB/1.7KB"}],"total_operations":2}}
+{"time":"2024-10-23T20:33:06.165923+11:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-23T20:33:07.415643+11:00","level":"INFO","msg":"stream: closing","id":"epil3wbf"}
+{"time":"2024-10-23T20:33:07.415667+11:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"epil3wbf"}}
+{"time":"2024-10-23T20:33:07.415696+11:00","level":"INFO","msg":"sender: closed","stream_id":"epil3wbf"}
+{"time":"2024-10-23T20:33:07.415689+11:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"epil3wbf"}}
+{"time":"2024-10-23T20:33:07.41579+11:00","level":"INFO","msg":"stream: closed","id":"epil3wbf"}

@@ -1,17 +1,35 @@
 import os
+import click
 import wandb
+import itertools
+import tensorflow as tf
 from model_training.model_trainer import create_sweep_config, model_training
+
+# GPU memory growth and mixed precision settings
+try:
+    gpus = tf.config.experimental.list_physical_devices('GPU')
+    if gpus:
+        for gpu in gpus:
+            tf.config.experimental.set_memory_growth(gpu, True)
+        # Optional: Enable mixed precision
+        tf.keras.mixed_precision.set_global_policy('mixed_float16')
+except Exception as e:
+    print(f"GPU setup error: {e}")
+    print("Continuing with CPU...")
+
+# Force TensorFlow to be hardware-agnostic
+tf.config.set_soft_device_placement(True)
 
 history_lengths = list(range(1, 13))  # From 1 to 12
 prediction_lengths = list(range(1, 13))  # From 1 to 12
 model_types = ['CNNModel', 'LSTMModel', 'CNNLSTMModel']
 input_types = ['univariate', 'multivariate']
 target_columns = ['t']
-folder_path = '/workspace'
+folder_path = 'workspace'
 data_path = f'{folder_path}/Processed Datasets/'
 probabilistic = False
 count = 50
-project_name =  "DSI_DAB_experiment_run"
+project_name =  "HASS_DSI_experiment_run"
 
 for filename in os.listdir(data_path):
     # Construct the full file path
@@ -39,7 +57,7 @@ for filename in os.listdir(data_path):
 
         # Generate all combinations and create sweeps
         for (history_length, prediction_length, model_type, input_type) in itertools.product(history_lengths, prediction_lengths, model_types, input_types):
-            sweep_config = create_sweep_config(target_column=target_column, history_length=history_length, prediction_length=prediction_length, model_type=model_type, input_type=input_type, save_path=save_path, data_path=file_path, history_path=history_path, probabilistic=probabilistic)
+            sweep_config = create_sweep_config(target_column=target_column, history_length=history_length, prediction_length=prediction_length, model_type=model_type, input_type=input_type, save_path=save_path, data_path=file_path, history_path=history_path, probabilistic=probabilistic, track_file=track_file)
             sweep_name = f"{history_length}-{prediction_length}-{input_type}-{model_type}"
             sweep_id = wandb.sweep(sweep_config, project=f"{project_name}")
             print(f"Created sweep {sweep_id} for {sweep_name}")

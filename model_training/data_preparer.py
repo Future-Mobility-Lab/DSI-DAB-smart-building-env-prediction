@@ -1,52 +1,10 @@
-import ipywidgets as widgets
-import tensorflow as tf
 import numpy as np
 import pandas as pd
-import shap
 from sklearn.preprocessing import MinMaxScaler
-from tensorflow.keras.callbacks import Callback, ModelCheckpoint
-from sklearn.metrics import mean_squared_error
-from wandb.keras import WandbCallback
-from scipy.signal import find_peaks
 import tensorflow_probability as tfp
-from abc import ABC, abstractmethod
-import matplotlib.pyplot as plt
-import seaborn as sns
-import itertools
-import wandb
-import json
-import os
-import re
 
 tfd = tfp.distributions
 
-gpus = tf.config.experimental.list_physical_devices('GPU')
-if gpus:
-    try:
-        # Currently, memory growth needs to be the same across GPUs
-        for gpu in gpus:
-            tf.config.experimental.set_memory_growth(gpu, True)
-    except RuntimeError as e:
-        # Memory growth must be set before GPUs have been initialized
-        print(e)
-
-def smape(y_true, y_pred):
-    # Convert y_true and y_pred to tensors of the same type, float32
-    y_true = tf.convert_to_tensor(y_true, dtype=tf.float32)
-    y_pred = tf.convert_to_tensor(y_pred, dtype=tf.float32)
-
-    denominator = (tf.abs(y_true) + tf.abs(y_pred)) / 2.0
-    diff = tf.abs(y_true - y_pred) / denominator
-    diff = tf.where(tf.math.is_nan(diff), tf.zeros_like(diff), diff)  # Handle NaNs possibly caused by zero division
-    return 100.0 * tf.reduce_mean(diff)
-
-def rmse(y_true, y_pred):
-    return np.sqrt(mean_squared_error(y_true, y_pred))
-
-def mape(y_true, y_pred):
-    return np.mean(np.abs((y_true - y_pred) / y_true)) * 100
-
-# Data preparation and splitting
 class DataPreparer:
     def __init__(self, data, target_column, history_length, prediction_length, train_split=0.6, val_split=0.2, input_type='multivariate', include_target_in_features=True, probabilistic=False, datetime_column=None):
         self.data = data

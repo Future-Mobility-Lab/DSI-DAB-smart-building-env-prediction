@@ -1,0 +1,17 @@
+{"time":"2024-10-23T19:25:12.240021+11:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-23T19:25:12.240069+11:00","level":"INFO","msg":"created symlink","path":"/Users/roupenminassian/Documents/Github/DSI-DAB-smart-building-env-prediction/wandb/run-20241023_192512-nfthy7ec/logs/debug-core.log"}
+{"time":"2024-10-23T19:25:12.262094+11:00","level":"INFO","msg":"created new stream","id":"nfthy7ec"}
+{"time":"2024-10-23T19:25:12.262161+11:00","level":"INFO","msg":"stream: started","id":"nfthy7ec"}
+{"time":"2024-10-23T19:25:12.262232+11:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"nfthy7ec"}}
+{"time":"2024-10-23T19:25:12.262287+11:00","level":"INFO","msg":"handler: started","stream_id":{"value":"nfthy7ec"}}
+{"time":"2024-10-23T19:25:12.262372+11:00","level":"INFO","msg":"sender: started","stream_id":"nfthy7ec"}
+{"time":"2024-10-23T19:25:12.67713+11:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-23T19:25:13.623612+11:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-23T19:25:13.62366+11:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-23T19:25:14.629058+11:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.5813852},{"desc":"uploading config.yaml","runtime_seconds":0.33487975,"progress":"1.5KB/1.5KB"},{"desc":"uploading output.log","runtime_seconds":0.334864453,"progress":"470B/470B"}],"total_operations":3}}
+{"time":"2024-10-23T19:25:17.448146+11:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-23T19:25:18.980161+11:00","level":"INFO","msg":"stream: closing","id":"nfthy7ec"}
+{"time":"2024-10-23T19:25:18.980185+11:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"nfthy7ec"}}
+{"time":"2024-10-23T19:25:18.98021+11:00","level":"INFO","msg":"sender: closed","stream_id":"nfthy7ec"}
+{"time":"2024-10-23T19:25:18.980201+11:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"nfthy7ec"}}
+{"time":"2024-10-23T19:25:18.980324+11:00","level":"INFO","msg":"stream: closed","id":"nfthy7ec"}

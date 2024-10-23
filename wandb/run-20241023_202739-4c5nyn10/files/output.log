@@ -1,0 +1,1 @@
+An error occurred: Kernel shape must have the same length as input, but received kernel of shape (3, 1, 128) and input of shape (None, 1, 1, 1).

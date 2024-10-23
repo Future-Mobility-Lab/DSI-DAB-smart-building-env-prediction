@@ -1,0 +1,54 @@
+wandb_version: 1
+
+activation:
+  value: relu
+batch_size:
+  value: 16
+cnn_kernel_size_1:
+  value: 2
+cnn_kernel_size_2:
+  value: 2
+cnn_layers:
+  value: 2
+data_path:
+  value: workspace/Processed Datasets/CB06.03.015_ssd_01D997.csv
+dense_units:
+  value: 64
+dilation_rate_1:
+  value: 4
+dilation_rate_2:
+  value: 2
+epochs:
+  value: 50
+filters_1:
+  value: 128
+filters_2:
+  value: 32
+history_length:
+  value: 1
+history_path:
+  value: workspace/t/Model Training History/CB06.03.015_ssd_01D997
+input_type:
+  value: univariate
+kernel_size_1:
+  value: 3
+kernel_size_2:
+  value: 3
+learning_rate:
+  value: 0.037667124237606014
+lstm_layers:
+  value: 4
+lstm_units:
+  value: 128
+model_type:
+  value: CNNModel
+optimizer:
+  value: lion
+prediction_length:
+  value: 1
+probabilistic:
+  value: false
+save_path:
+  value: workspace/t/Model Weights/CB06.03.015_ssd_01D997
+target_column:
+  value: t

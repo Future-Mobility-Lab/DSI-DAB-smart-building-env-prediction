@@ -1,0 +1,17 @@
+{"time":"2024-10-23T20:30:29.704446+11:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-23T20:30:29.704532+11:00","level":"INFO","msg":"created symlink","path":"/Users/roupenminassian/Documents/Github/DSI-DAB-smart-building-env-prediction/wandb/run-20241023_203029-0leoyzyf/logs/debug-core.log"}
+{"time":"2024-10-23T20:30:29.791203+11:00","level":"INFO","msg":"created new stream","id":"0leoyzyf"}
+{"time":"2024-10-23T20:30:29.791347+11:00","level":"INFO","msg":"stream: started","id":"0leoyzyf"}
+{"time":"2024-10-23T20:30:29.79193+11:00","level":"INFO","msg":"sender: started","stream_id":"0leoyzyf"}
+{"time":"2024-10-23T20:30:29.791821+11:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"0leoyzyf"}}
+{"time":"2024-10-23T20:30:29.79192+11:00","level":"INFO","msg":"handler: started","stream_id":{"value":"0leoyzyf"}}
+{"time":"2024-10-23T20:30:30.196558+11:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-23T20:30:33.053147+11:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-23T20:30:33.05321+11:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-23T20:30:34.057648+11:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.772341439},{"desc":"uploading config.yaml","runtime_seconds":0.527550862,"progress":"1.7KB/1.7KB"},{"desc":"uploading output.log","runtime_seconds":0.527537,"progress":"710B/710B"}],"total_operations":3}}
+{"time":"2024-10-23T20:30:34.512435+11:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-23T20:30:35.783922+11:00","level":"INFO","msg":"stream: closing","id":"0leoyzyf"}
+{"time":"2024-10-23T20:30:35.784213+11:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"0leoyzyf"}}
+{"time":"2024-10-23T20:30:35.784269+11:00","level":"INFO","msg":"sender: closed","stream_id":"0leoyzyf"}
+{"time":"2024-10-23T20:30:35.784254+11:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"0leoyzyf"}}
+{"time":"2024-10-23T20:30:35.784428+11:00","level":"INFO","msg":"stream: closed","id":"0leoyzyf"}

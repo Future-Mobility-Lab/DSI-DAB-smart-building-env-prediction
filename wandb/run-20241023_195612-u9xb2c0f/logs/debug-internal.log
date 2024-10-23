@@ -1,0 +1,17 @@
+{"time":"2024-10-23T19:56:12.442698+11:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-23T19:56:12.442898+11:00","level":"INFO","msg":"created symlink","path":"/Users/roupenminassian/Documents/Github/DSI-DAB-smart-building-env-prediction/wandb/run-20241023_195612-u9xb2c0f/logs/debug-core.log"}
+{"time":"2024-10-23T19:56:12.461746+11:00","level":"INFO","msg":"created new stream","id":"u9xb2c0f"}
+{"time":"2024-10-23T19:56:12.461827+11:00","level":"INFO","msg":"stream: started","id":"u9xb2c0f"}
+{"time":"2024-10-23T19:56:12.461985+11:00","level":"INFO","msg":"handler: started","stream_id":{"value":"u9xb2c0f"}}
+{"time":"2024-10-23T19:56:12.462253+11:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"u9xb2c0f"}}
+{"time":"2024-10-23T19:56:12.462277+11:00","level":"INFO","msg":"sender: started","stream_id":"u9xb2c0f"}
+{"time":"2024-10-23T19:56:12.777209+11:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-23T19:56:15.911446+11:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-23T19:56:15.911514+11:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-23T19:56:16.818372+11:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-23T19:56:16.915658+11:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading summary, console logs","runtime_seconds":0.097057428}],"total_operations":1}}
+{"time":"2024-10-23T19:56:18.094346+11:00","level":"INFO","msg":"stream: closing","id":"u9xb2c0f"}
+{"time":"2024-10-23T19:56:18.094382+11:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"u9xb2c0f"}}
+{"time":"2024-10-23T19:56:18.09441+11:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"u9xb2c0f"}}
+{"time":"2024-10-23T19:56:18.09444+11:00","level":"INFO","msg":"sender: closed","stream_id":"u9xb2c0f"}
+{"time":"2024-10-23T19:56:18.094547+11:00","level":"INFO","msg":"stream: closed","id":"u9xb2c0f"}

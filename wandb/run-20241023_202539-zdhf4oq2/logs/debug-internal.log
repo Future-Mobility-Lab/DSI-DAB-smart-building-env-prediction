@@ -1,0 +1,17 @@
+{"time":"2024-10-23T20:25:39.128343+11:00","level":"INFO","msg":"using version","core version":"0.18.5"}
+{"time":"2024-10-23T20:25:39.128394+11:00","level":"INFO","msg":"created symlink","path":"/Users/roupenminassian/Documents/Github/DSI-DAB-smart-building-env-prediction/wandb/run-20241023_202539-zdhf4oq2/logs/debug-core.log"}
+{"time":"2024-10-23T20:25:39.15052+11:00","level":"INFO","msg":"created new stream","id":"zdhf4oq2"}
+{"time":"2024-10-23T20:25:39.150611+11:00","level":"INFO","msg":"stream: started","id":"zdhf4oq2"}
+{"time":"2024-10-23T20:25:39.150982+11:00","level":"INFO","msg":"sender: started","stream_id":"zdhf4oq2"}
+{"time":"2024-10-23T20:25:39.151008+11:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"zdhf4oq2"}}
+{"time":"2024-10-23T20:25:39.15099+11:00","level":"INFO","msg":"handler: started","stream_id":{"value":"zdhf4oq2"}}
+{"time":"2024-10-23T20:25:39.570301+11:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-23T20:25:42.687426+11:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-23T20:25:42.687496+11:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-23T20:25:43.69076+11:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"saving job artifact","runtime_seconds":0.759108169}],"total_operations":1}}
+{"time":"2024-10-23T20:25:43.893511+11:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-23T20:25:45.255029+11:00","level":"INFO","msg":"stream: closing","id":"zdhf4oq2"}
+{"time":"2024-10-23T20:25:45.255055+11:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"zdhf4oq2"}}
+{"time":"2024-10-23T20:25:45.255078+11:00","level":"INFO","msg":"sender: closed","stream_id":"zdhf4oq2"}
+{"time":"2024-10-23T20:25:45.255071+11:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"zdhf4oq2"}}
+{"time":"2024-10-23T20:25:45.255212+11:00","level":"INFO","msg":"stream: closed","id":"zdhf4oq2"}
