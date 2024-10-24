@@ -3,12 +3,12 @@ import pandas as pd
 from model_testing.test_evaluator import evaluate_all_models
 
 # Configuration and data loading
-folder_path = '/workspace'
+folder_path = 'workspace'
 target_column = "t"
 data_path = f'{folder_path}/Processed Datasets/'
-model_dir = f'{folder_path}/DSI DAB Input Type/{target_column}/Model Weights/'
-history_folder = f'{folder_path}/DSI DAB Input Type/{target_column}/Model Training History/'
-results_folder = f'{folder_path}/Evaluation/DSI DAB Input Type/{target_column}/'
+model_dir = f'{folder_path}/{target_column}/Model Weights/'
+history_folder = f'{folder_path}/{target_column}/Model Training History/'
+results_folder = f'{folder_path}/Evaluation/{target_column}/'
 probabilistic = False
 
 results = pd.DataFrame(columns=['Filename', 'History Length', 'Prediction Length', 'Input Type', 'Model Type', 'RMSE', 'MAPE', 'SMAPE'])

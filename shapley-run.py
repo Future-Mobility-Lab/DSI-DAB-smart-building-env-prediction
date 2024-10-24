@@ -5,12 +5,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MaxNLocator
 from model_training.data_preparer import DataPreparer
-from model_testing.test_evaluator import TestEvaluator
 
-folder_path = '/content/drive/MyDrive/UTS/Hass-DSI/2024'
+folder_path = 'workspace'
 target_column = "t"
 data_path = f'{folder_path}/Processed Datasets/'
-model_dir = f'{folder_path}/Evaluation/HASS-DSI Input Type/{target_column}/'
+model_dir = f'{folder_path}/Evaluation/{target_column}/'
 history_length = 12
 prediction_length = 1
 input_type = 'multivariate'

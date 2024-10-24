@@ -1,3 +1,0 @@
-/Users/roupenminassian/Documents/Github/DSI-DAB-smart-building-env-prediction/myenv/lib/python3.10/site-packages/keras/src/layers/convolutional/base_conv.py:107: UserWarning: Do not pass an `input_shape`/`input_dim` argument to a layer. When using Sequential models, prefer using an `Input(shape)` object as the first layer in the model instead.
-  super().__init__(activity_regularizer=activity_regularizer, **kwargs)
-An error occurred: name 'track_file' is not defined

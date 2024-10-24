@@ -204,7 +204,7 @@ jupyterlab_pygments==0.3.0
 jupyterlab_widgets==3.0.13
 kaggle==1.6.17
 kagglehub==0.3.1
-keras==3.6.0
+keras==2.15.0
 keyring==23.5.0
 kiwisolver==1.4.7
 langcodes==3.4.1
@@ -234,7 +234,7 @@ miniKanren==1.0.3
 missingno==0.5.2
 mistune==0.8.4
 mizani==0.11.4
-ml-dtypes==0.3.2
+ml-dtypes==0.2.0
 mlxtend==0.23.1
 more-itertools==10.5.0
 moviepy==1.0.3
@@ -415,14 +415,15 @@ tables==3.8.0
 tabulate==0.9.0
 tblib==3.0.0
 tenacity==9.0.0
-tensorboard==2.16.2
+tensorboard==2.15.2
 tensorboard-data-server==0.7.2
-tensorflow==2.16.2
+tensorflow==2.15.0
 tensorflow-datasets==4.9.6
+tensorflow-estimator==2.15.0
 tensorflow-hub==0.16.1
 tensorflow-io-gcs-filesystem==0.37.1
 tensorflow-metadata==1.16.1
-tensorflow-probability==0.24.0
+tensorflow-probability==0.23.0
 tensorstore==0.1.66
 termcolor==2.5.0
 terminado==0.18.1
@@ -467,7 +468,7 @@ websocket-client==1.8.0
 Werkzeug==3.0.4
 widgetsnbextension==3.6.9
 wordcloud==1.9.3
-wrapt==1.16.0
+wrapt==1.14.1
 xarray==2024.9.0
 xarray-einstats==0.8.0
 xgboost==2.1.1
