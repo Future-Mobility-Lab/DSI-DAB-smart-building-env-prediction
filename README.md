@@ -17,7 +17,7 @@ cd DSI-DAB-smart-building-env-prediction
 
 2. Create and activate a virtual environment:
 ```bash
-python -m venv env
+python3.10 -m venv env
 source env/bin/activate  # On Windows, use: env\Scripts\activate
 ```
 
