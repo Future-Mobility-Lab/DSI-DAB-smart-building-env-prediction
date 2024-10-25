@@ -1,6 +1,6 @@
 # DSI-DAB-smart-building-env-prediction
 
-This repository contains the codebase for a collaborative research project between the Data Science Institute (DSI) and the Faculty of Design, Architecture and Building. The project focuses on optimising indoor environmental prediction in smart buildings using deep learning models.
+This repository contains the codebase for a collaborative research project between the Data Science Institute (DSI) and the Faculty of Design, Architecture and Building (DAB). The project focuses on optimising indoor environmental prediction in smart buildings using deep learning models.
 
 <!-- Add your banner image here -->
 <div align="center">
@@ -87,8 +87,10 @@ The evaluation process generates several outputs:
 
 ## Contributors
 
-- [List of contributors]
+- Roupen Minassian (Machine Learning Researcher)
+- Adriana-Simona Mihăiţă (Associate Professor, Data Science Institute)
+- Arezoo Shirazi (Senior Lecturer + Course Director, Faculty of Design, Architecture and Building)
 
 ## Contact
 
-For questions or collaboration opportunities, please contact [contact information].
+For questions or collaboration opportunities, please contact Roupen Minassian at firstname.lastname@uts.edu.au
