@@ -105,7 +105,6 @@ The evaluation process generates several outputs:
 - Performance metrics in CSV format
 - Prediction plots comparing actual vs predicted values
 - Training history plots
-- Peak analysis plots (for non-probabilistic models)
 - Shapley value analysis plots and statistics (for multivariate models)
 
 ## License
