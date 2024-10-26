@@ -377,7 +377,7 @@ def evaluate_all_models(model_dir, data_path, filename, results_folder, history_
                 data_preparer_test = DataPreparer(data=data, target_column=target_column, history_length=history_length, prediction_length=prediction_length, input_type=input_type, datetime_column='Time')
                 evaluator = TestEvaluator(model_path, filename, history_length, prediction_length, input_type, model_type, target_column, data_preparer_test, probabilistic, results_folder, history_folder)
 
-                if input_type == 'variate':
+                if input_type == 'multivariate':
                     # Evaluate model with SHAP
                     shap_values = evaluator.evaluate_model_with_shap()
                     shapley_save = f"{results_folder+filename}/Shapley Values/"
@@ -401,7 +401,6 @@ def evaluate_all_models(model_dir, data_path, filename, results_folder, history_
 
                 else:
                     rmse, mape, smape = evaluator.evaluate_model()
-                    peaks_info = evaluator.evaluate_model_peaks()
 
                     new_row = pd.DataFrame([{
                         'Filename': filename,
@@ -411,11 +410,7 @@ def evaluate_all_models(model_dir, data_path, filename, results_folder, history_
                         'Model Type': model_type,
                         'RMSE': rmse,
                         'MAPE': mape,
-                        'SMAPE': smape,
-                        'SMAPE Peaks': peaks_info['average_diff_magnitude'],
-                        'Average Peak Index Difference': peaks_info['average_peak_index_diff'],
-                        'False Positives Count': len(peaks_info['false_positives']),
-                        'False Negatives Count': len(peaks_info['false_negatives'])
+                        'SMAPE': smape
                     }])
 
                 results_df = pd.concat([results_df, new_row], ignore_index=True)

@@ -38,10 +38,10 @@ workspace/
 ├── Processed Datasets/     # Contains preprocessed CSV files
 ├── t/                     # Target variable specific folders
 │   ├── Model Weights/     # Trained model weights
-│   ├── Model Training History/  # Training
+│   ├── Model Training History/  # Training history files
 │   └── Performance Tracking/ # Model tracking
-history files
 └── Evaluation/           # Model evaluation results
+    └── Figures/          # Generated visualizations including Shapley plots
 ```
 
 ## Running the Project
@@ -53,6 +53,12 @@ The project uses Weights & Biases (wandb) for experiment tracking. To train mode
 ```bash
 python run_experiments.py --device [cpu/gpu] --mixed-precision
 ```
+
+This script performs a comprehensive grid search across multiple configurations:
+- History lengths: 1 to 12 timesteps
+- Prediction horizons: 1 to 12 timesteps
+- Model architectures: CNN, LSTM, and CNN-LSTM hybrid
+- Input types: univariate and multivariate
 
 Options:
 - `--device`: Choose between 'cpu' or 'gpu' (default: 'cpu')
@@ -72,6 +78,27 @@ This script will:
 3. Generate visualization plots
 4. Save results to a CSV file in the Evaluation directory
 
+### Shapley Analysis
+
+To perform feature importance analysis using Shapley values, run:
+
+```bash
+python shapley-run.py
+```
+
+Note: The Shapley analysis script has been specifically configured and verified for:
+- History length: 12 timesteps (fixed)
+- Prediction horizon: 1 timestep (fixed)
+- Input type: multivariate only
+- Model architectures: CNN, LSTM, and CNN-LSTM hybrid
+- These parameters are currently hard-coded in the script
+
+This script generates:
+- Temporal Shapley value plots showing feature contributions across timesteps
+- Feature importance bar plots based on mean absolute SHAP values
+- Detailed statistics of feature impacts saved in CSV format
+- Visualizations saved in the `workspace/Evaluation/Figures/` directory
+
 ## Output
 
 The evaluation process generates several outputs:
@@ -79,7 +106,7 @@ The evaluation process generates several outputs:
 - Prediction plots comparing actual vs predicted values
 - Training history plots
 - Peak analysis plots (for non-probabilistic models)
-- Shapley value analysis (for multivariate models)
+- Shapley value analysis plots and statistics (for multivariate models)
 
 ## License
 
@@ -87,7 +114,7 @@ The evaluation process generates several outputs:
 
 ## Contributors
 
-- Roupen Minassian (Machine Learning Researcher)
+- Roupen Minassian (Machine Learning Researcher, Data Science Institute)
 - Adriana-Simona Mihăiţă (Associate Professor, Data Science Institute)
 - Arezoo Shirazi (Senior Lecturer + Course Director, Faculty of Design, Architecture and Building)
 

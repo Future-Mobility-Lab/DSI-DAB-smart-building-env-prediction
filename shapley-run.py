@@ -13,10 +13,10 @@ model_dir = f'{folder_path}/Evaluation/{target_column}/'
 history_length = 12
 prediction_length = 1
 input_type = 'multivariate'
-model_type = 'CNNModel'
+model_type = ['CNNModel', 'LSTMModel', 'CNNLSTMModel']
 probabilistic = False
-results_folder = ''
-history_folder = ''
+results_folder = f'{folder_path}/Evaluation/{target_column}/'
+history_folder = f'{folder_path}/{target_column}/Model Training History/'
 
 # List to store all experiment results
 all_experiments = []
@@ -153,14 +153,14 @@ for plot_idx, feature in enumerate(filtered_features):
 plt.subplots_adjust(hspace=0.1, left=0.05, right=0.95, top=0.95, bottom=0.05)  # Adjust subplot parameters to minimize padding
 plt.tight_layout()
 
-plt.savefig("/content/drive/MyDrive/UTS/Hass-DSI/2024/Evaluation/Figures/shapley_plot_continuous.pdf", format='pdf', bbox_inches='tight')
+plt.savefig(f'{folder_path}/Evaluation/Figures/shapley_plot_continuous.pdf', format='pdf', bbox_inches='tight')
 
 # Save the statistics to a CSV file for reporting
 stats_summary = stats_per_timestep.stack(level=0).reset_index()
 stats_summary.columns = ['Timestep', 'Feature', 'Mean', 'Variance', 'CI_lower', 'CI_upper']
-stats_summary.to_csv("/content/statistics_summary.csv", index=False)
+#stats_summary.to_csv("/content/statistics_summary.csv", index=False)
 
-feature_list = ['h','t','pm10','pm25','People_Count','voc','Booked','p','HVAC_Status','co2'] #list(all_features)
+feature_list = ['h','t','People_Count','voc','Booked','p','HVAC_Status','co2'] #list(all_features)
 
 # Calculate mean absolute Shapley values for each feature
 mean_shap_abs = df_shap_all[feature_list].apply(np.abs).mean().sort_values(ascending=True)
@@ -181,4 +181,4 @@ ax.xaxis.set_major_locator(MaxNLocator(5))
 
 plt.tight_layout()
 
-plt.savefig("/content/feature_importance_shap.pdf", format='pdf', bbox_inches='tight')
+plt.savefig(f'{folder_path}/Evaluation/Figures/feature_importance_shap.pdf', format='pdf', bbox_inches='tight')
