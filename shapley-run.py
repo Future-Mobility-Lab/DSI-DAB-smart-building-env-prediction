@@ -158,7 +158,7 @@ plt.savefig(f'{folder_path}/Evaluation/Figures/shapley_plot_continuous.pdf', for
 # Save the statistics to a CSV file for reporting
 stats_summary = stats_per_timestep.stack(level=0).reset_index()
 stats_summary.columns = ['Timestep', 'Feature', 'Mean', 'Variance', 'CI_lower', 'CI_upper']
-#stats_summary.to_csv("/content/statistics_summary.csv", index=False)
+stats_summary.to_csv(f'{folder_path}/Evaluation/{target_column}/shapley_statistics_summary.csv', index=False)
 
 feature_list = ['h','t','People_Count','voc','Booked','p','HVAC_Status','co2'] #list(all_features)
 
