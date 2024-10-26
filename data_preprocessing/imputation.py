@@ -87,5 +87,5 @@ def process_all_datasets(folder_path):
 
     print("All datasets processed!")
 
-processed_folder_path = '/content/drive/MyDrive/UTS/Hass-DSI/Device Data/Device Data (Updated)/processed/'
+processed_folder_path = 'workspace/Processed Datasets'
 process_all_datasets(processed_folder_path)
