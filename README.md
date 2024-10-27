@@ -51,7 +51,7 @@ workspace/
 The project uses Weights & Biases (wandb) for experiment tracking. To train models, run:
 
 ```bash
-python run_experiments.py --device [cpu/gpu] --mixed-precision
+python experiment-run.py --device [cpu/gpu] --mixed-precision
 ```
 
 This script performs a comprehensive grid search across multiple configurations:
