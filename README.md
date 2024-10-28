@@ -4,7 +4,7 @@ This repository contains the codebase for a collaborative research project betwe
 
 <!-- Add your banner image here -->
 <div align="center">
-  <img src="assets/banner.png" alt="Project Banner" width="100%">
+  <img src="assets/uts-logo.png" alt="Project Banner" width="100%">
 </div>
 
 ## Prerequisites
