@@ -119,4 +119,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For questions or collaboration opportunities, please contact Roupen Minassian at firstname.lastname@uts.edu.au
+For questions or collaboration opportunities, please contact Roupen dot Minassian @uts.edu.au
