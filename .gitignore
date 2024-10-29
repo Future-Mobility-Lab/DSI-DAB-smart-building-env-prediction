@@ -1,8 +1,10 @@
 # Virtual environments
 env/
+myenv/
 venv/
 ENV/
 .env
+.myenv
 .venv
 .python-version
 
