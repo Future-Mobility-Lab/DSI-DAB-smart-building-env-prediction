@@ -123,7 +123,7 @@ For questions or collaboration opportunities, please contact Roupen dot Minassia
 
 ## Citation
 
-```bash
+```
 @article{MINASSIAN2025115086,
 title = {Optimizing indoor environmental prediction in smart buildings: A comparative analysis of deep learning models},
 journal = {Energy and Buildings},
