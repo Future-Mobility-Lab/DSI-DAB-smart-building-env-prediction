@@ -120,3 +120,19 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 
 For questions or collaboration opportunities, please contact Roupen dot Minassian @uts.edu.au
+
+## Citation
+
+```bash
+@article{MINASSIAN2025115086,
+title = {Optimizing indoor environmental prediction in smart buildings: A comparative analysis of deep learning models},
+journal = {Energy and Buildings},
+volume = {327},
+pages = {115086},
+year = {2025},
+issn = {0378-7788},
+doi = {https://doi.org/10.1016/j.enbuild.2024.115086},
+url = {https://www.sciencedirect.com/science/article/pii/S0378778824012027},
+author = {Roupen Minassian and Adriana-Simona Mihăiţă and Arezoo Shirazi}
+}
+```
